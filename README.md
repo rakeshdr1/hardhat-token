@@ -1,5 +1,7 @@
 # Basic Sample Hardhat Project
 
+Deployed to Rinkeby - 0xF3DE458A55C7A68A73101b502dc4f670746Cd85E
+
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
 Try running some of the following tasks:
