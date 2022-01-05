@@ -4,8 +4,8 @@ describe('Token contract',()=>{
     let Token,token, owner, addr1, addr2;
 
     beforeEach(async()=>{
-        Token=await ethers.getContractFactory('Token')
-        token=await Token.deploy();
+        Token=await ethers.getContractFactory('FungToken')
+        token=await Token.deploy(1000000);
         [owner,addr1,addr2] =await ethers.getSigners()
     })
 

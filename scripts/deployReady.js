@@ -7,9 +7,9 @@ async function main(){
     const balance= await deployer.getBalance()
     console.log(`Account Balance:${balance.toString()}`)
 
-    const Token=await ethers.getContractFactory('FungToken')
+    const Token=await ethers.getContractFactory('FungReadyToken')
 
-    const token=await Token.deploy(10000000)
+    const token=await Token.deploy("Fungible Ready Token","FRT")
     console.log(`Token address:${token.address}`)
 
     const data={
@@ -17,7 +17,7 @@ async function main(){
         abi:JSON.parse(token.interface.format('json'))
     }
 
-    fs.writeFileSync('data/FungToken.json',JSON.stringify(data))
+    fs.writeFileSync('data/FungReadyToken.json',JSON.stringify(data))
 }
 
 main().then(()=>process.exit(0)).catch(error=>{
